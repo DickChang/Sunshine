@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
             }
         } else {
             mTwoPane = false;
+            /*getSupportActionBar().setElevation(0f);*/
         }
 
         ForecastFragment forecastFragment =  ((ForecastFragment)getSupportFragmentManager()
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_logo);
     }
 
     @Override
