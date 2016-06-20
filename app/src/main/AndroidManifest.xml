@@ -48,7 +48,7 @@
                 android:value="com.example.dickchang.sunshine.app.MainActivity" />
         </activity>
         <provider
-            android:authorities="com.example.dickchang.sunshine.app"
+            android:authorities="@string/content_authority"
             android:name=".data.WeatherProvider"
             android:exported="false"
             android:syncable="true" />
@@ -63,7 +63,6 @@
                     android:resource="@xml/authenticator" />
             </service>
 
-        <service android:name=".service.SunshineService"/>
         <receiver android:name=".service.SunshineService$AlarmReceiver" android:enabled="true"/>
         <!-- The SyncAdapter service -->
         <service
